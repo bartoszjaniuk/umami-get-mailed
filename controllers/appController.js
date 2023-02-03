@@ -2,10 +2,7 @@ const AppError = require("../utils/appError");
 
 exports.initialize = (req, res, next) => {
   try {
-    res.status(200).json({
-      status: "success",
-      message: "Initialize application",
-    });
+    res.status(200).json({});
   } catch (err) {
     return next(
       new AppError(
