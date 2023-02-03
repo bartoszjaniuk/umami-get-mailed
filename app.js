@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use("/api/v1/email", emailRouter);
 
-const job = schedule.scheduleJob("*/1 * * * *", async function (fireDate) {
+const job = schedule.scheduleJob("*/10 * * * *", async function (fireDate) {
   const result = await ping.promise.probe("www.dietetyk-umami.pl", {
     timeout: 10,
     extra: ["-i", "2"],
